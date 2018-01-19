@@ -14,7 +14,7 @@ public class Main {
         int MAX = 10000;
         int answer, guess;
         int numberOfGuesses = 0;
-        int guesses;
+//        int guesses;
         String another;
         boolean flag;
         boolean anotherFlag = true;
@@ -26,13 +26,13 @@ public class Main {
 
         while (anotherFlag) {
             System.out.println("I'm thinking of a number between 1 and " + MAX + ". Can you guess what it is?");
-            guesses = sc.nextInt();
-
-            String[] attempts = new String[guesses];
-
-            for (int counter = 0; counter < guesses; counter++) {
-                System.out.println("Your guesses so far are " + (counter+1));
-            }
+//            guesses = sc.nextInt();
+//
+//            String[] attempts = new String[guesses];
+//
+//            for (int counter = 0; counter < guesses; counter++) {
+//                System.out.println("Your guesses so far are " + (counter+1));
+//            }
             flag = false;
             while (!flag) {
                 guess = sc.nextInt();
@@ -43,10 +43,11 @@ public class Main {
                     flag = true;
                 } else if (guess > answer) {
                     System.out.println("That is not the correct number, sorry. My number is lower than " + guess + ". Try again.");
-                    System.out.println("Your range is between " + (guess-1)+ " and 1.");
+                    System.out.println("Your range is between " + (guess - 1) + " and 1.");
                 } else if (guess < answer) {
                     System.out.println("That is not the correct number, sorry. My number is higher than " + guess + ". Try again.");
-                    System.out.println("Your range is between " + (guess+1) + " and " + MAX + ".");}
+                    System.out.println("Your range is between " + (guess + 1) + " and " + MAX + ".");
+                }
             } //End of inner while loop
             System.out.println(" ");
             System.out.println("Would you like ot play again (y/n)?");
@@ -58,12 +59,11 @@ public class Main {
                 anotherFlag = false;
                 System.out.println("Thanks for playing! Goodbye!");
             }
+        }
 
-        } //End of outer while loop
+    }
+}
 
-
-    } //ENd of psvm
-} //End of Main Class
 
 
 
